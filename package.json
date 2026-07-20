@@ -1,0 +1,15 @@
+{
+  "name": "benimaru-proxy",
+  "version": "1.0.0",
+  "description": "Proxy server lokal untuk Benimaru AI (menyembunyikan Groq API key dari publik)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

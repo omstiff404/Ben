@@ -1,0 +1,30 @@
+BENIMARU AI — CARA MENJALANKAN
+================================
+
+1. Install Node.js (v18+) dari https://nodejs.org kalau belum ada.
+2. Buka folder "benimaru" ini di terminal.
+3. Jalankan:
+     npm install
+4. Buka file config.js, ganti GROQ_API_KEY dengan API key asli
+   (ambil gratis di https://console.groq.com).
+5. Jalankan:
+     npm start
+6. Buka browser ke:
+     http://localhost:3000
+   Benimaru langsung aktif, pengunjung tidak perlu isi API key apa pun.
+
+TARUH AVATAR
+------------
+Taruh gambar avatar di folder asset/gambar/ dengan nama: benimaru.png
+
+SUPAYA BISA DIAKSES PUBLIK (bukan cuma di komputer sendiri)
+------------------------------------------------------------
+Jalankan langkah 1-5 di atas di server/VPS yang punya IP publik atau
+domain (pakai pm2 atau systemd biar servernya tetap nyala terus),
+lalu pengunjung akses lewat domain/IP server itu. Kalau hanya
+dijalankan di komputer pribadi (localhost), hanya komputer itu sendiri
+yang bisa mengaksesnya.
+
+Batas jumlah pesan per menit per pengunjung bisa diatur di config.js
+lewat RATE_LIMIT_PER_MINUTE, supaya API key kamu tidak dihabisi orang
+iseng kalau nanti sudah publik.
